@@ -17,11 +17,14 @@
         frutas.Add("Uva");
 
         //Imprimir os itens da lista
-        Console.WriteLine("Minha lista de frutas:");
+        /*Console.WriteLine("Minha lista de frutas:");
         foreach (string fruta in frutas)
         {
             Console.WriteLine(fruta);
-        }
+        }*/
+
+        //Impressão da lista em uma única linha
+        frutas.ForEach(Console.WriteLine);
 
         Console.WriteLine(); // Pula linha em branco
 
@@ -49,8 +52,17 @@
             Console.WriteLine(fruta);
         }
 
+        //Remover elementos da lista do indice especifico
+        frutas.RemoveAt(3);
+        //Remover elementos pelo valor do conteúdo
+        frutas.Remove("Morango");
+
+        //imprimir a lista novamente
+        Console.WriteLine();
+        Console.WriteLine("Minha lista de frutas:");
+        frutas.ForEach(Console.WriteLine);
+
         // Apagar todos os elementos da lista 
         frutas.Clear();
-
     }
 }
